@@ -11,8 +11,9 @@
 </head>
 <body>
 	<script src="js/script2.js"></script>
-		<div class="body_container">
-				<div class="top_nav">
+
+		<div class="body_container" >
+				<div class="top_nav" id="navbar">
 					<div class="top-left">
 						<a href="#" class="active1"> Home  </a> 
 						<a href="#"> Portfolio </a>
@@ -126,39 +127,60 @@
 		  <p>
 			<br><br><br><br> 
 		  </p>
-		  
-			<div>
-				<div class="slideshow-container">
+	<div>
+		
+		  <div class="slideshow-container">
 
-					<div class="mySlides fade">
-					  <div class="numbertext">1 / 3</div>
-					  <img src="Pics/IMG_20210607_143736.jpg" style="width:100%">
-					  <div class="text">Caption Text</div>
-					</div>
-					
-					<div class="mySlides fade">
-					  <div class="numbertext">2 / 3</div>
-					  <img src="Pics/IMG_20210607_143753.jpg" style="width:100%">
-					  <div class="text">Caption Two</div>
-					</div>
-					
-					<div class="mySlides fade">
-					  <div class="numbertext">3 / 3</div>
-					  <img src="Pics/IMG_20210607_143756.jpg" style="width:100%">
-					  <div class="text">Caption Three</div>
-					</div>
-					
-					</div>
-					<br>
-					
-					<div style="text-align:center">
-					  <span class="dot"></span> 
-					  <span class="dot"></span> 
-					  <span class="dot"></span> 
-					</div>
-					
+			<div class="mySlides fade">
+			  <div class="numbertext">1 / 3</div>
+			  <img src="Pics/background_pic.png" style="width:100%">
+			  <div class="text">Caption Text</div>
 			</div>
 			
+			<div class="mySlides fade">
+			  <div class="numbertext">2 / 3</div>
+			  <img src="Pics/background_pic.png" style="width:100%">
+			  <div class="text">Caption Two</div>
+			</div>
+			
+			<div class="mySlides fade">
+			  <div class="numbertext">3 / 3</div>
+			  <img src="Pics/background_pic.png" style="width:100%">
+			  <div class="text">Caption Three</div>
+			</div>
+			
+			</div>
+			<br>
+			
+			<div style="text-align:center">
+			  <span class="dot"></span> 
+			  <span class="dot"></span> 
+			  <span class="dot"></span> 
+			</div>
+		</div>
+					<script>
+						var slideIndex = 0;
+						showSlides();
+						
+						function showSlides() {
+							var i;
+							var slides = document.getElementsByClassName("mySlides");
+							var dots = document.getElementsByClassName("dot");
+							for (i = 0; i < slides.length; i++) {
+							   slides[i].style.display = "none";  
+							}
+							slideIndex++;
+							if (slideIndex > slides.length) {slideIndex = 1}    
+							for (i = 0; i < dots.length; i++) {
+								dots[i].className = dots[i].className.replace(" active", "");
+							}
+							slides[slideIndex-1].style.display = "block";  
+							dots[slideIndex-1].className += " active";
+							setTimeout(showSlides, 5000); // Change image every 2 seconds
+						}
+					</script>
+				
+			<!-- 
 			<div class="backgr">
 				<table>
 					<th colspan="2">
@@ -179,54 +201,71 @@
 					</tr>
 				</table>
 			</div>
+		 -->
 			<div class="card_table">
-				<ul>
-					<li>
-						<div class="img_encl">
-							<img src="Pics/vision1.jpg" alt=""/>
-						</div>
-						<h3> Our Vision </h3>
-						<p>
-							Providing an atmosphere for children which allow them to reach their role potential in a safe and nurturing environment.
-						</p>
-					</li>
-					<li>
-						<div class="img_encl">
-							<img src="Pics/missiodn.jpg" alt=""/>
-						</div>
-							<h3> Our Mission </h3>
-							<p>
-								To protect, as well as provide care beyong limits to children through Love, advocacy, education, rehabilitation and family support.
-							</p>
-					</li>
-					<li>
-						<div class="img_encl">
-							<img src="Pics/main_goa.jpg" alt=""/>
-						</div>
-						<h3> Our Main Goal </h3>
-							<p>
-								Promote children's welfare by ensuring their safety and support their families from suffering further.
-							</p>
-					</li>
-				</ul>
-				
-			</div>
-			<center> 
-			<div class="histo1">
-				<h3> Aims Of RRF </h3>
-				<hr>
+
+				<button class="tablink" onclick="openPage('Home', this, 'rgb(40, 97, 172)')"> Vision</button>
+				<button class="tablink" onclick="openPage('News', this, 'rgb(40, 97, 172)')" id="defaultOpen">Mission</button>
+				<button class="tablink" onclick="openPage('Contact', this, 'rgb(40, 97, 172)')">Goals</button>
+				<button class="tablink" onclick="openPage('Aims', this, 'rgb(40, 97, 172)')">Aims</button>
+
+				<div id="Home" class="tabcontent">
+					
+				<h3>Our Vision</h3>
+				<p>
+					Providing an atmosphere for children which allow them to reach their role potential in a safe and nurturing environment.
+				</p>
+				</div>
+
+				<div id="News" class="tabcontent">
+					
+				<h3>Our Mission</h3>
+				<p>
+					To protect, as well as provide care beyong limits to children through Love, advocacy, education, rehabilitation and family support.
+				</p>
+				</div>
+
+				<div id="Contact" class="tabcontent">
+					
+				<h3>Our main goal</h3>
+				<p>Get in touch, or swing by for a cup of coffee.</p>
+				</div>
+
+				<div id="Aims" class="tabcontent">
+					
+				<h3>Aims</h3>
 				<p>
 					<b>y</b> Provides care and support for children and disadvantaged families.
 				</p>
 				<p>
 					<b>y</b> Advocates the concerns, rights and needs of children.
 				</p>
+				</div>
+				<script>
+					//code for the about tabs 
+					function openPage(pageName,elmnt,color) {
+						var i, tabcontent, tablinks;
+						tabcontent = document.getElementsByClassName("tabcontent");
+						for (i = 0; i < tabcontent.length; i++) {
+							tabcontent[i].style.display = "none";
+						}
+						tablinks = document.getElementsByClassName("tablink");
+						for (i = 0; i < tablinks.length; i++) {
+							tablinks[i].style.backgroundColor = "";
+						}
+						document.getElementById(pageName).style.display = "block";
+						elmnt.style.backgroundColor = color;
+
+					}
+					// Get the element with id="defaultOpen" and click on it
+					document.getElementById("defaultOpen").click();
+				</script>
 				
 				
 			</div>
-		</center>
+			
 			<!--
-				 <div class="histo1">
+				 <div >
 				<h3> How do we support the community</h3>
 				- We help children shape their own futures. <br>
 				- We share in the development of their communities. <br>
@@ -236,7 +275,12 @@
 			
 		<div class="footer_content">
 			<ul>
-				<li>
+				<li style="width: 20%;">
+					<p style="text-align: center;">
+						<img src="Pics/logo.png" alt="RRF_logo" class="logR"/>
+					</p>
+				</li>
+				<li style="width: 30%;">
 					<b> Our Contacts </b>
 					<p>
 						<code class="social_icon">g</code>
@@ -283,9 +327,7 @@
 						<textarea placeholder="Your Message!" class="inp_f0"></textarea> <br>
 						<input type="submit" value="Send Message" class="inp_f1" />
 					</form>
-					<p style="text-align: center;">
-						<img src="Pics/logo.png" alt="RRF_logo" class="logR"/>
-					</p>
+					
 					
 				</li>
 			</ul>

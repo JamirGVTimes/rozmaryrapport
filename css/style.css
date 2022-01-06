@@ -174,26 +174,21 @@ span.psw {
        width: 100%;
     }
 }
-/*
+
 @media (min-width: 1000px){
 .body_container {
-    flex: 1 0 35%;
-    margin-left: auto;
-}
-*/
-.body_container {
-	/*background-color: rgba(100, 100, 100, 0.3); */
+	background-color: rgba(229, 237, 240, 0.973); 
 	font-family: sans-serif;
 	font-size: 16px;
 	height: auto;
 	padding: 0;
-	background-image: url(../Pics/backu.jpg);
-	background-attachment: fixed;
-	min-width: 500;
-	width: 1440;
+	/*background-image: url(../Pics/backu.jpg); 
+	background-attachment: fixed;*/
+	width: 100%;
 	/* position: absolute; */
-	
 }
+}
+
 .top_nav {
 	color: rgb(106, 107, 109);
 	background-color: rgb(255, 255, 255);
@@ -202,10 +197,10 @@ span.psw {
 	top: 0;
 	width: 100%;
 	height: max-content;
-	display: inline-table;
-	position: fixed;
 	box-shadow: 1px 1px 10px;
-	
+	position: fixed;
+	display:block;
+	transition: top 0.3s;
 }
 .top-left {
 	padding: 15px;
@@ -245,71 +240,73 @@ span.psw {
 }
 
 /* code for the slider image */
+* {box-sizing: border-box;}
+
 /* Slideshow container */
 .slideshow-container {
-	max-width: 1000px;
-	position: relative;
-	margin: auto;
-  }
-  
-  /* Caption text */
-  .text {
-	color: #f2f2f2;
-	font-size: 15px;
-	padding: 8px 12px;
-	position: absolute;
-	bottom: 8px;
-	width: 100%;
-	text-align: center;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-	color: #f2f2f2;
-	font-size: 12px;
-	padding: 8px 12px;
-	position: absolute;
-	top: 0;
-  }
-  
-  /* The dots/bullets/indicators */
-  .dot {
-	height: 15px;
-	width: 15px;
-	margin: 0 2px;
-	background-color: #bbb;
-	border-radius: 50%;
-	display: inline-block;
-	transition: background-color 0.6s ease;
-  }
-  
-  .active {
-	background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
-	-webkit-animation-name: fade;
-	-webkit-animation-duration: 1.5s;
-	animation-name: fade;
-	animation-duration: 1.5s;
-  }
-  
-  @-webkit-keyframes fade {
-	from {opacity: .4} 
-	to {opacity: 1}
-  }
-  
-  @keyframes fade {
-	from {opacity: .4} 
-	to {opacity: 1}
-  }
-  
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-	.text {font-size: 11px}
-  }
+  max-width: 1200px;
+  position: relative;
+  margin: auto;
+}
 
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+}
+/* end of the slide show */
 
 .backgr {
 	margin: 5px 15%;
@@ -360,92 +357,77 @@ span.psw {
 	font-weight: 700;
 	font-size: 15px;
 }
+/* code for the tab setion */
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+/*
+#Home {background-color: rgb(248, 245, 245);}
+#News {background-color: rgb(248, 245, 245);}
+#Contact {background-color: rgb(248, 245, 245);}
+#Aims {background-color: rgb(248, 245, 245);}
+*/
+
 
 .card_table {
-	margin: 50px 1%;
+	margin: 100px 12%;
 	padding: 15px;
-	text-align: center;
+	background-color: rgb(245, 251, 252);
+	border-radius: 0 0 15px 15px;
+	border: 1px solid rgb(193, 193, 194)
+}
+
+.card_table img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
 
 }
-.card_table ul {
-	margin: 20px 1%;
-}
-.card_table ul li{
-	list-style: none;
-	width: 400px;
-	display: inline-table;
-	margin: 4px;
-	background-color: rgb(229, 235, 235);
-	padding: 30px 0;
-	height: inherit;
-	border-bottom: 5px inset chocolate;
-	border-radius: 7px;
-}
-.card_table ul li:hover {
-	box-shadow: 1px 1px 10px black;
-	transition: all 0.5s ease-in-out;
-}
-.card_table .img_encl{
-	padding: 7px;
-}
-.card_table img {
-	width: 140px;
-	height: 140px;
-	border-radius: 50%;
-}
-.card_table h3 {
-	margin: 0;
-	color: rgb(255, 253, 253);
-	text-transform: uppercase;
-	background-color: rgb(70, 116, 168);
-	padding: 8px 0;
-}
 .card_table p{
-	color: rgba(0, 0, 0, 0.6);
-	display: inline-table;
-	padding: 20px 2px;
+	color: rgb(47, 48, 49);
+	padding:  5px;
 }
-.histo1 {
-	padding: 20px 20px;
-	width: 60%;
-	background-color: rgba(122, 121, 121, 0.6);
-	margin: 40px auto;
+.card_table b{
+	font-family: linkd;
 }
+
 hr{
 	background-color: rgba(255, 255, 255, 0.6);
 	border: none;
 	height: 2px;
 	margin: 0;
 }
-.histo1 h3 {
-	text-transform: uppercase;
-	background-color: rgb(40, 97, 172);
-	padding: 20px 10px;
-	margin: 0;
-	color: white;
-	border-radius: 15px 15px 0 0;
-}
-.histo1 p{
-	border-bottom: 0.5px solid rgb(255, 255, 255);
-	padding: 7px;
-	color: white;
-	margin: 1px;
-	background-color: rgb(110, 110, 110);
-}
-.histo1 b{
-	font-family: linkd;
-	font-size: 19px;
-}
-
 
 /* Code for the footer content */
 .footer_content {
  	background-color: rgba(255, 255, 255, 1.0); 
 	padding: 15px;
+	font-size: 14px;
 	text-align: center;
-	border-top: 3px solid rgba(0, 0, 0, 0.6);
-	margin-top: 50px;
+	border-top: 1px solid rgb(158, 156, 156);
+	margin-top: 100px;
 	color: rgb(100, 100, 100);
+	width: 100%;
 	
 }
 .logR {
@@ -464,12 +446,14 @@ hr{
 	
 }
 .footer_content ul{
-	margin: 20px 1%;
+	margin: 20px 2px;
+	min-width: 500px;
 }
 .footer_content ul li {
 		list-style: none;
 		display: inline-table;
-		width: 400px;
+		min-width: 300px;
+		width: 23%;
 		text-align: left;
 		margin: 4px 2px;
 		padding: 3px;
@@ -484,7 +468,7 @@ hr{
 }
 .footer_content ul li p{
 	padding: 3px 0;
-	min-width: 200px;
+	width: auto;
 	line-height: 60px;
 	margin: 0 2px;
 	border-bottom: 0.5px dotted rgba(100, 100, 100, 0.678);
@@ -525,7 +509,7 @@ hr{
 }
 .barc {
 	font-family: barcode;
-	font-size: 50px;
+	font-size: 40px;
 	border: none;
 	width: max-content;
 	
