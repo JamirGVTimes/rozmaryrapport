@@ -1,0 +1,545 @@
+html {
+    height: 100%;
+}
+* {box-sizing: border-box}
+body {
+	margin: 0;
+	width: 1440;
+	min-height: 100vh;
+
+}
+/* code for the vertical left tabs
+
+/* Code for the donate pop-up */
+/* Full-width input fields */
+input[type=text] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	border-radius: 7px;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #407ab1;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+	border-radius: 30px;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+.container {
+    padding: 16px;
+	
+}
+.personalDetailsTable {
+	width: 100%;
+	height: 100%;
+	text-align: left;
+}
+.personalDetailsTable input {
+	width: 80%;
+}
+.personalDetailsTable select {
+	width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	border-radius: 7px;
+}
+.donate_table {
+	width: 100%;
+	height: 100%;
+	padding: 10px 12%;
+	text-align: left;
+}
+.donate_table td{
+	width: 50%;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+	right: 5%;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+	color: rgb(30, 31, 32);
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+	text-align: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5px auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+.paym {
+	padding: 0;
+}
+.paym input{
+	width: 20%;
+	color: brown;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 7px 14px;
+	border: 1px solid rgba(163, 163, 163, 0.3);
+	border-radius: 0 5px 5px 0;
+	margin: 0;
+}
+.paym button{
+	padding: 7px 14px;
+	border: 1px solid rgba(163, 163, 163, 0.3);
+	border-radius: 5px 0 0 5px;
+	width: max-content;
+	font-size: 18px;
+	margin: 0;
+}
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+/*
+@media (min-width: 1000px){
+.body_container {
+    flex: 1 0 35%;
+    margin-left: auto;
+}
+*/
+.body_container {
+	/*background-color: rgba(100, 100, 100, 0.3); */
+	font-family: sans-serif;
+	font-size: 16px;
+	height: auto;
+	padding: 0;
+	background-image: url(../Pics/backu.jpg);
+	background-attachment: fixed;
+	min-width: 500;
+	width: 1440;
+	/* position: absolute; */
+	
+}
+.top_nav {
+	color: rgb(106, 107, 109);
+	background-color: rgb(255, 255, 255);
+	padding: 3px;
+	margin: 0;
+	top: 0;
+	width: 100%;
+	height: max-content;
+	display: inline-table;
+	position: fixed;
+	box-shadow: 1px 1px 10px;
+	
+}
+.top-left {
+	padding: 15px;
+	background-color: rgb(255, 255, 255);
+	color: rgb(106, 107, 109);
+	display: inline-table;
+	border-bottom: 1px solid rgba(100, 100, 100, 0.678);
+	width: max-content;
+
+}
+.top_nav a {
+	text-decoration: none;
+	margin: 5px 5px;
+	padding: inherit;
+	color: rgb(106, 107, 109);
+}
+.top_nav .active1 {
+	color: rgb(83, 156, 216);
+}
+.top_nav a:hover {
+	color: rgb(83, 156, 216);
+	border-radius: 10px;
+}
+.donate_top_but {
+	margin: auto 5px;
+	padding: 7px 14px;
+	font-size: 14px;
+	color: white;
+	background-color: rgba(224, 114, 10, 0.842);
+	border: none;
+	cursor: pointer;
+	border-radius: 30px;
+}
+.donate_top_but:hover {
+	background-color:  rgb(40, 97, 172);
+	transition: all 0.5s ease-in-out
+}
+
+/* code for the slider image */
+/* Slideshow container */
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+  }
+  
+  /* Caption text */
+  .text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+  }
+  
+  .active {
+	background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+  }
+  
+  @keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+	.text {font-size: 11px}
+  }
+
+
+.backgr {
+	margin: 5px 15%;
+	background-color: rgb(184, 187, 187);
+	padding: 20px;
+}
+.backgr table td:nth-child(odd){
+	width: 20%;
+}
+.backgr table td:nth-child(even){
+	width: 80%;
+	padding: 15px;
+	height: 200px;
+}
+.backgr table th h1{
+	text-transform: uppercase;
+	background-color: rgb(40, 97, 172);
+	padding: 20px 10px;
+	margin: 0;
+	color: white;
+	border-radius: 15px 15px 0 0;
+}
+.backgr table td:nth-child(even) p{
+	border: 1px dotted rgb(66, 66, 66);
+	border-radius: 7px;
+	padding: 15px;
+	line-height: 25px;
+	background-color: rgba(253, 254, 255, 0.342);
+	height: auto;
+	min-width: inherit;
+	color: rgb(61, 60, 60);
+
+}
+.backgr table img {
+	width: fit-content;
+	height: fit-content;
+	display: inline;
+	min-width: max-content;
+	border-radius: 0 0 15px 15px;
+}
+.read_more_button {
+	background-color: rgb(40, 97, 172);
+	color: white;
+	padding: 7px 14px;
+	border-radius: 30px;
+	border: none;
+	margin: 20px;
+	font-weight: 700;
+	font-size: 15px;
+}
+
+.card_table {
+	margin: 50px 1%;
+	padding: 15px;
+	text-align: center;
+
+}
+.card_table ul {
+	margin: 20px 1%;
+}
+.card_table ul li{
+	list-style: none;
+	width: 400px;
+	display: inline-table;
+	margin: 4px;
+	background-color: rgb(229, 235, 235);
+	padding: 30px 0;
+	height: inherit;
+	border-bottom: 5px inset chocolate;
+	border-radius: 7px;
+}
+.card_table ul li:hover {
+	box-shadow: 1px 1px 10px black;
+	transition: all 0.5s ease-in-out;
+}
+.card_table .img_encl{
+	padding: 7px;
+}
+.card_table img {
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+}
+.card_table h3 {
+	margin: 0;
+	color: rgb(255, 253, 253);
+	text-transform: uppercase;
+	background-color: rgb(70, 116, 168);
+	padding: 8px 0;
+}
+.card_table p{
+	color: rgba(0, 0, 0, 0.6);
+	display: inline-table;
+	padding: 20px 2px;
+}
+.histo1 {
+	padding: 20px 20px;
+	width: 60%;
+	background-color: rgba(122, 121, 121, 0.6);
+	margin: 40px auto;
+}
+hr{
+	background-color: rgba(255, 255, 255, 0.6);
+	border: none;
+	height: 2px;
+	margin: 0;
+}
+.histo1 h3 {
+	text-transform: uppercase;
+	background-color: rgb(40, 97, 172);
+	padding: 20px 10px;
+	margin: 0;
+	color: white;
+	border-radius: 15px 15px 0 0;
+}
+.histo1 p{
+	border-bottom: 0.5px solid rgb(255, 255, 255);
+	padding: 7px;
+	color: white;
+	margin: 1px;
+	background-color: rgb(110, 110, 110);
+}
+.histo1 b{
+	font-family: linkd;
+	font-size: 19px;
+}
+
+
+/* Code for the footer content */
+.footer_content {
+ 	background-color: rgba(255, 255, 255, 1.0); 
+	padding: 15px;
+	text-align: center;
+	border-top: 3px solid rgba(0, 0, 0, 0.6);
+	margin-top: 50px;
+	color: rgb(100, 100, 100);
+	
+}
+.logR {
+	width: 60px;
+	height: auto;
+}
+.social_icon {
+	font-family: SocialLinks;
+	font-size: 25px;
+	margin: 0;
+	padding: 5px;
+}
+.footer_content img {
+	width: 40px;
+	height: auto;
+	
+}
+.footer_content ul{
+	margin: 20px 1%;
+}
+.footer_content ul li {
+		list-style: none;
+		display: inline-table;
+		width: 400px;
+		text-align: left;
+		margin: 4px 2px;
+		padding: 3px;
+}
+.footer_content ul li b{
+	background-color: rgb(40, 97, 172);
+	color: white;
+	padding: 7px 14px;
+	margin-bottom: 20px;
+	line-height: 70px;
+	border-radius: 5px;
+}
+.footer_content ul li p{
+	padding: 3px 0;
+	min-width: 200px;
+	line-height: 60px;
+	margin: 0 2px;
+	border-bottom: 0.5px dotted rgba(100, 100, 100, 0.678);
+}
+.inp_f {
+	border-radius: 7px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	padding: 7px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
+	margin: 10px 0;
+	width: 95%;
+	background: transparent;
+}
+.inp_f0 {
+	border-radius: 7px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	padding: 7px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
+	margin: 10px 0;
+	width: 95%;
+	height: 100px;
+	background: transparent;
+}
+.inp_f1 {
+	border-radius: 7px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	padding: 7px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
+	margin: 10px 0;
+	width: 100%;
+	color: white;
+	cursor: pointer;
+	background-color: rgb(40, 97, 172);
+	
+}
+.barc {
+	font-family: barcode;
+	font-size: 50px;
+	border: none;
+	width: max-content;
+	
+}
+/* my smart fonts bgimahood technologies +256 774 058894 */
+@font-face {
+	font-family: SocialLinks;
+	src: url(../My_fonts/SmartphonePro.ttf);
+}
+@font-face {
+	font-family: linkd;
+	src: url(../My_fonts/DC_Comics.ttf);
+}
+@font-face {
+	font-family: barcode;
+	src: url(../My_fonts/BarcodeFont.ttf);
+}
