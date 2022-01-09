@@ -25,6 +25,7 @@
 							Donate
 						</button>
 					
+				
 					</div>
 						
 				</div>
@@ -57,11 +58,11 @@
 					  <td>
 						  <h4>Amount to donate</h4>
 						  <p class="paym">
-							  <button>$</button><input type="number" placeholder="0.0"> 
+							  <button>$</button><input type="number" placeholder="10.0" min="10" max="2000"> 
 						  </p>
 						  <span style="font-size: 12px;">Minimum is $10.00 and maximum is $2000.00</span>
 					  </td>
-					  <td>
+					  <td style="text-align: left;">
 						  <h4>Payment Method</h4>
 						  <p class="paym">
 							  <input type="radio" name="payment_method"> Visa/Debit Card
@@ -91,6 +92,7 @@
 								  <option>Kenya</option>
 								  <option>Tanzania</option>
 								  <option>Uganda</option>
+								  <option>USA</option>
 								  <option>Turkey</option>
 							  </select> 
 							  </td>
@@ -112,7 +114,8 @@
 				  </tr>
 				  <tr>
 					  <td colspan="2">
-						  <button type="submit" style="width: 90%; border-radius: 30px; font-size: 17px;"> Submit Details </button>
+						  <button type="reset" style="width: 40%; border-radius: 30px; font-size: 17px;"> Reset Form </button>
+						  <button type="submit" style="width: 40%; border-radius: 30px; font-size: 17px;"> Submit Details </button>
 					  </td>
 				  </tr>
 			  </table>
@@ -132,21 +135,33 @@
 		  <div class="slideshow-container">
 
 			<div class="mySlides fade">
-			  <div class="numbertext">1 / 3</div>
-			  <img src="Pics/background_pic.png" style="width:100%">
-			  <div class="text">Caption Text</div>
+			  <div class="numbertext">
+				   <img src="Pics/logo.png" alt="rapport-logo" ><br> 
+				   <b style="color: rgb(66, 121, 175);"> Rozmary Rapport Foundation </b> <br>
+				   A Charitable Organisation
+				</div>
+			  <img src="Pics/background_pic1.png" style="width:100%">
+			  <div class="text">We help children shape their own futures</div>
 			</div>
 			
 			<div class="mySlides fade">
-			  <div class="numbertext">2 / 3</div>
-			  <img src="Pics/background_pic.png" style="width:100%">
-			  <div class="text">Caption Two</div>
+				<div class="numbertext">
+					<img src="Pics/logo.png" alt="rapport-logo" ><br> 
+					<b style="color: rgb(66, 121, 175);"> Rozmary Rapport Foundation </b> <br>
+					A Charitable Organisation
+				 </div>
+			  <img src="Pics/background_pic2.png" style="width:100%">
+			  <div class="text">We support families for children in need!</div>
 			</div>
 			
 			<div class="mySlides fade">
-			  <div class="numbertext">3 / 3</div>
-			  <img src="Pics/background_pic.png" style="width:100%">
-			  <div class="text">Caption Three</div>
+				<div class="numbertext">
+					<img src="Pics/logo.png" alt="rapport-logo" ><br> 
+					<b style="color: rgb(66, 121, 175);"> Rozmary Rapport Foundation </b> <br>
+					A Charitable Organisation
+				 </div>
+			  <img src="Pics/background_pic3.png" style="width:100%">
+			  <div class="text">We share in the development of their communities!</div>
 			</div>
 			
 			</div>
@@ -176,36 +191,27 @@
 							}
 							slides[slideIndex-1].style.display = "block";  
 							dots[slideIndex-1].className += " active";
-							setTimeout(showSlides, 5000); // Change image every 2 seconds
+							setTimeout(showSlides, 5000); // Change slider image every 2 seconds
 						}
 					</script>
 				
-			<!-- 
-			<div class="backgr">
-				<table>
-					<th colspan="2">
-						<h1>Background</h1>	
-						
-					</th>
-					<tr>
-						<td>
-							<img src="Pics/asaph.jpg" alt="founder" />
-						</td>
-						<td>
-							
-							<p>
-								<b> Rozmary Rapport Foundation (RRF)</b> was founded in 2019 by a servant of God <b> Birungi Charles </b> from Africa, Uganda - Hoima district. It started by working on Children Empowerment with a purpose of improving the livelihoods of the caregivers and thier children through food security, with HIV/AIDS prevention and education. <br> He witnessed the suffering of so many abandoned children and orphans and felt that something had to be done to help them. Out of his unswerving conviction, Rozmary Rapport Foundation idea was born. <br>
+			
+ <h2 class="bk_head">BACKGROUND</h2>
+		 <div class="backgr">
+			
+			 <div class="back_data">
+				 <p>
+					<b style="color: rgb(73, 144, 214);"> Rozmary Rapport Foundation (RRF)</b> was founded in 2019 by a servant of God <b> Birungi Charles </b> from Africa, Uganda - Hoima district. It started by working on Children <span style="color: brown;"> Empowerment</span> with a purpose of improving the livelihoods of the caregivers and thier children through food security, with HIV/AIDS prevention and education. <br> He witnessed the suffering of so many abandoned children and orphans and felt that something had to be done to help them. Out of his unswerving conviction, <b>Rozmary Rapport Foundation </b> idea was born. <br>
 								<button class="read_more_button">Read More...</button>
-							</p>
-						</td>
-					</tr>
-				</table>
-			</div>
-		 -->
+				 </p>
+			 </div>
+		 </div>
+
+		 <br>
 			<div class="card_table">
 
-				<button class="tablink" onclick="openPage('Home', this, 'rgb(40, 97, 172)')"> Vision</button>
-				<button class="tablink" onclick="openPage('News', this, 'rgb(40, 97, 172)')" id="defaultOpen">Mission</button>
+				<button class="tablink" onclick="openPage('Home', this, 'rgb(40, 97, 172)')" id="defaultOpen"> Vision</button>
+				<button class="tablink" onclick="openPage('News', this, 'rgb(40, 97, 172)')" >Mission</button>
 				<button class="tablink" onclick="openPage('Contact', this, 'rgb(40, 97, 172)')">Goals</button>
 				<button class="tablink" onclick="openPage('Aims', this, 'rgb(40, 97, 172)')">Aims</button>
 
@@ -264,23 +270,9 @@
 				
 			</div>
 			
-			<!--
-				 <div >
-				<h3> How do we support the community</h3>
-				- We help children shape their own futures. <br>
-				- We share in the development of their communities. <br>
-				- We support families for children in need.<br>
-					</div> 
-			-->
-			
 		<div class="footer_content">
 			<ul>
-				<li style="width: 20%;">
-					<p style="text-align: center;">
-						<img src="Pics/logo.png" alt="RRF_logo" class="logR"/>
-					</p>
-				</li>
-				<li style="width: 30%;">
+				<li>
 					<b> Our Contacts </b>
 					<p>
 						<code class="social_icon">g</code>
@@ -331,7 +323,9 @@
 					
 				</li>
 			</ul>
-			A &copy; Copyright 2022 . All rights reserved by Rozmary Rapport Foundantion Ltd
+			<div class="bottom_adv"> 
+				A &copy; Copyright 2022 . All rights reserved by Rozmary Rapport Foundantion Ltd | Designed by:  <a href="https://jamirgvtimes.github.io/bgimahood">  <button> BGIMAHOOD iNC TECHNOLOGIES </button> </a>
+			</div>
 		</div>
 	</div>
 </body>

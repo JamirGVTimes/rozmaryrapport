@@ -6,7 +6,7 @@ body {
 	margin: 0;
 	width: 1440;
 	min-height: 100vh;
-
+	font-family: Arial, Helvetica, sans-serif;;
 }
 /* code for the vertical left tabs
 
@@ -21,7 +21,10 @@ input[type=text] {
     box-sizing: border-box;
 	border-radius: 7px;
 }
-
+input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
 /* Set a style for all buttons */
 button {
     background-color: #407ab1;
@@ -113,9 +116,10 @@ span.psw {
 }
 .paym {
 	padding: 0;
+	
 }
-.paym input{
-	width: 20%;
+.paym input[type=text], input[type=number]{
+	width: 50%;
 	color: brown;
 	font-size: 18px;
 	font-weight: bold;
@@ -247,26 +251,48 @@ span.psw {
   max-width: 1200px;
   position: relative;
   margin: auto;
+  border-radius: 15px;
+  background-color: rgb(189, 191, 192);
+  border:  1px solid rgba(91, 92, 92, 0.966);
+}
+.slideshow-container img{
+	border-radius: 12px;
 }
 
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
+  font-size: 17px;
+  padding: 12px 24px;
   position: absolute;
-  bottom: 8px;
+  bottom: 0;
   width: 100%;
   text-align: center;
+  background-color: rgba(3, 2, 2, 0.781);
+  border-radius: 0 0 15px 15px;
+  border-top:  10px solid rgba(255, 180, 40, 0.966);
+	
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
+  padding: 15px 15px;
   position: absolute;
-  top: 0;
+  top: 5px;
+  line-height: 20px;
+  border: 1px solid rgb(159, 161, 161);
+  left: 5px;
+  text-align: center;
+  transition: box-shadow 0.5s ease-in-out;
+  box-shadow: 1px 4px 8px rgb(108, 109, 110);
+  border-radius: 12px 12px 0 12px;
+  background-color: rgba(8, 7, 7, 0.678);
+  cursor: pointer;
+  max-width: 600px;
+}
+.numbertext img {
+	width: 70px;
+	height: 70px;
 }
 
 /* The dots/bullets/indicators */
@@ -304,48 +330,48 @@ span.psw {
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .text {font-size: 11px; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+  .text {
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	
+}
 }
 /* end of the slide show */
-
-.backgr {
-	margin: 5px 15%;
-	background-color: rgb(184, 187, 187);
-	padding: 20px;
-}
-.backgr table td:nth-child(odd){
-	width: 20%;
-}
-.backgr table td:nth-child(even){
-	width: 80%;
-	padding: 15px;
-	height: 200px;
-}
-.backgr table th h1{
-	text-transform: uppercase;
-	background-color: rgb(40, 97, 172);
-	padding: 20px 10px;
-	margin: 0;
+.bk_head {
+	margin-top: 100px;
+	margin-bottom: 0;
+	text-align: center;
+	background-color:  rgb(40, 97, 172);
 	color: white;
-	border-radius: 15px 15px 0 0;
+	padding: 10px 5px;
+	border-bottom: 5px solid white;
 }
-.backgr table td:nth-child(even) p{
-	border: 1px dotted rgb(66, 66, 66);
-	border-radius: 7px;
-	padding: 15px;
-	line-height: 25px;
-	background-color: rgba(253, 254, 255, 0.342);
-	height: auto;
-	min-width: inherit;
-	color: rgb(61, 60, 60);
-
-}
-.backgr table img {
-	width: fit-content;
+.backgr {
+	margin: auto 1%;
+	background-image: url(../Pics/FB_IMG_1641540879297.jpg);
+	padding: 20px;
 	height: fit-content;
-	display: inline;
-	min-width: max-content;
-	border-radius: 0 0 15px 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 24px;
+    min-height: 500px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.backgr .back_data {
+	position: absolute;
+    right: 2px;
+    margin: 20px;
+    max-width: 600px;
+    padding: 16px 20px;
+    background-color: white;
+	border-radius: 7px;
+}
+.backgr .back_data:hover {
+	box-shadow: 1px 4px 10px black;
+	opacity: 0.8;
+	transition: all 0.6s ease;
 }
 .read_more_button {
 	background-color: rgb(40, 97, 172);
@@ -354,6 +380,7 @@ span.psw {
 	border-radius: 30px;
 	border: none;
 	margin: 20px;
+	width: fit-content;
 	font-weight: 700;
 	font-size: 15px;
 }
@@ -425,7 +452,7 @@ hr{
 	font-size: 14px;
 	text-align: center;
 	border-top: 1px solid rgb(158, 156, 156);
-	margin-top: 100px;
+	margin-top: 150px;
 	color: rgb(100, 100, 100);
 	width: 100%;
 	
@@ -445,17 +472,13 @@ hr{
 	height: auto;
 	
 }
-.footer_content ul{
-	margin: 20px 2px;
-	min-width: 500px;
-}
+
 .footer_content ul li {
 		list-style: none;
 		display: inline-table;
-		min-width: 300px;
-		width: 23%;
+		max-width: 500px;
 		text-align: left;
-		margin: 4px 2px;
+		margin: 4px 10px;
 		padding: 3px;
 }
 .footer_content ul li b{
@@ -476,21 +499,25 @@ hr{
 .inp_f {
 	border-radius: 7px;
 	border: 1px solid rgba(0, 0, 0, 0.3);
-	padding: 7px;
+	padding: 9px 18px;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 16px;
+	font-size: 13px;
 	margin: 10px 0;
-	width: 95%;
+	max-width: 95%;
 	background: transparent;
+}
+.inp_f:focus, .inp_f0:focus  {
+	background-color: rgb(240, 240, 240);
+	outline: none;
 }
 .inp_f0 {
 	border-radius: 7px;
 	border: 1px solid rgba(0, 0, 0, 0.3);
-	padding: 7px;
+	padding: 9px 18px;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 16px;
+	font-size: 13px;
 	margin: 10px 0;
-	width: 95%;
+	max-width: 95%;
 	height: 100px;
 	background: transparent;
 }
@@ -499,13 +526,16 @@ hr{
 	border: 1px solid rgba(0, 0, 0, 0.3);
 	padding: 7px;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	margin: 10px 0;
-	width: 100%;
+	max-width: 95%;
 	color: white;
 	cursor: pointer;
-	background-color: rgb(40, 97, 172);
+	background-color: rgba(224, 114, 10, 0.842);
 	
+}
+.inp_f1:hover {
+	opacity: 0.6;
 }
 .barc {
 	font-family: barcode;
@@ -513,6 +543,30 @@ hr{
 	border: none;
 	width: max-content;
 	
+}
+.bottom_adv {
+	width: 100%;
+	background-color: white;
+	padding: 20px 2px;
+	border-top: 2px solid rgb(40, 97, 172);
+	font-size: 15px;
+}
+.bottom_adv a {
+	text-decoration: none;
+	color: rgb(42, 116, 212);
+	cursor: pointer;
+}
+.bottom_adv button {
+	background-color: rgb(21, 190, 15);
+	border-radius: 30px;
+	width: fit-content;
+	padding: 7px 14px;
+	color: white;
+	font-size: 16px;
+	font-weight: 100;
+}
+.bottom_adv a button:hover {
+	opacity: 0.7;
 }
 /* my smart fonts bgimahood technologies +256 774 058894 */
 @font-face {
